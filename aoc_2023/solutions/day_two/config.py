@@ -6,7 +6,7 @@ class Config:
         self.red_limit = red_limit
         self.green_limit = green_limit
         self.blue_limit = blue_limit
-    
+
     @classmethod
     def from_json(cls, file: TextIOWrapper):
         data = json.loads(file.read())

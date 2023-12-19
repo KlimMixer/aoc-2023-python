@@ -17,10 +17,10 @@ class ParseTaskOneStrategy(ParseStrategy):
             green_all = self.green_regexp.findall(line)
             blue_all = self.blue_regexp.findall(line)
             return GameModel(
-                id=int(game_id[0]),
-                red=map(lambda x: int(x), red_all),
-                green=map(lambda x: int(x), green_all),
-                blue=map(lambda x: int(x), blue_all)
+                identificator=int(game_id[0]),
+                red=map(int, red_all),
+                green=map(int, green_all),
+                blue=map(int, blue_all)
             )
         else:
             return None
